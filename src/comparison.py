@@ -78,93 +78,165 @@ def get_aligned_political_statements():
     plus some moderate/compromise positions.
     """
     statements = {
-        # ECONOMIC POLICY
-        # Progressive
-        "econ_prog_strong": "We need high taxes on the wealthy, universal basic income, and strong market regulations",
-        "econ_prog_mod": "Progressive taxation and reasonable market oversight protect working families",
-        # Moderate
-        "econ_mod_1": "A mixed economy balancing free markets with necessary regulations works best",
-        "econ_mod_2": "We should combine market efficiency with basic social protections",
-        # Conservative
-        "econ_cons_mod": "Lower taxes and reduced regulation promote economic growth and job creation",
-        "econ_cons_strong": "Free market capitalism with minimal government intervention maximizes prosperity",
+    # ECONOMIC POLICY
+    # Progressive
+    "econ_prog_strong_2": "Nationalize key industries and implement wealth caps",
+    "econ_prog_strong_3": "Break up all large corporations and redistribute wealth",
+    "econ_prog_strong_4": "Mandate employee ownership in all major companies",
+    "econ_prog_mod_2": "Expand social programs through corporate tax reform",
+    "econ_prog_mod_3": "Strengthen unions and mandate profit sharing",
+    "econ_prog_mod_4": "Implement guaranteed public sector jobs",
+    # Moderate
+    "econ_mod_3": "Support both small business and worker protections",
+    "econ_mod_4": "Targeted incentives for economic development",
+    "econ_mod_5": "Promote public-private partnerships for growth",
+    # Conservative
+    "econ_cons_mod_2": "Simplify tax code and reduce business regulations",
+    "econ_cons_mod_3": "Promote free trade with limited protections",
+    "econ_cons_mod_4": "Focus on debt reduction and fiscal restraint",
+    "econ_cons_strong_2": "Eliminate most business regulations entirely",
+    "econ_cons_strong_3": "Privatize all government services possible",
+    "econ_cons_strong_4": "Flat tax rate for all income levels",
 
-        # HEALTHCARE
-        # Progressive
-        "health_prog_strong": "We need Medicare for All with no private insurance involvement",
-        "health_prog_mod": "Universal healthcare should be a basic right with optional private insurance",
-        # Moderate
-        "health_mod_1": "A public option alongside private insurance gives people choice",
-        "health_mod_2": "Healthcare reform should expand access while preserving private insurance",
-        # Conservative
-        "health_cons_mod": "Market-based healthcare with limited government involvement works best",
-        "health_cons_strong": "Healthcare should be fully private with no government interference",
+    # HEALTHCARE
+    # Progressive
+    "health_prog_strong_2": "Nationalize all hospitals and medical facilities",
+    "health_prog_strong_3": "Free universal mental and dental coverage",
+    "health_prog_strong_4": "Government control of pharmaceutical industry",
+    "health_prog_mod_2": "Expand Medicare to age 50 and above",
+    "health_prog_mod_3": "Universal catastrophic coverage with subsidies",
+    "health_prog_mod_4": "Mandatory employer-provided health benefits",
+    # Moderate
+    "health_mod_3": "Reform drug pricing while preserving innovation",
+    "health_mod_4": "Increase healthcare price transparency",
+    "health_mod_5": "Promote preventive care and wellness programs",
+    # Conservative
+    "health_cons_mod_2": "Health savings accounts with tax benefits",
+    "health_cons_mod_3": "Interstate insurance competition",
+    "health_cons_mod_4": "Tort reform to reduce healthcare costs",
+    "health_cons_strong_2": "Cash-only medical practice model",
+    "health_cons_strong_3": "Eliminate all healthcare mandates",
+    "health_cons_strong_4": "Fully privatize Medicare and Medicaid",
 
-        # CLIMATE/ENVIRONMENT
-        # Progressive
-        "climate_prog_strong": "We need immediate radical action including carbon bans and strict regulations",
-        "climate_prog_mod": "Strong carbon pricing and renewable energy investments are essential",
-        # Moderate
-        "climate_mod_1": "Market-based solutions like carbon taxes can fight climate change",
-        "climate_mod_2": "Balance environmental protection with economic growth",
-        # Conservative
-        "climate_cons_mod": "Environmental protection should be handled by states and markets",
-        "climate_cons_strong": "Climate regulations hurt business and aren't necessary",
+    # CLIMATE/ENVIRONMENT
+    # Progressive
+    "climate_prog_strong_2": "Ban all fossil fuel extraction immediately",
+    "climate_prog_strong_3": "Mandatory transition to plant-based diet",
+    "climate_prog_strong_4": "Zero-emission requirements for all industries",
+    "climate_prog_mod_2": "Green infrastructure investment program",
+    "climate_prog_mod_3": "Phase out gas vehicles by 2030",
+    "climate_prog_mod_4": "Mandate solar panels on new construction",
+    # Moderate
+    "climate_mod_3": "Invest in nuclear and renewable energy",
+    "climate_mod_4": "Incentivize corporate sustainability",
+    "climate_mod_5": "Support clean energy research and development",
+    # Conservative
+    "climate_cons_mod_2": "Focus on conservation over regulation",
+    "climate_cons_mod_3": "Promote voluntary emissions reduction",
+    "climate_cons_mod_4": "Balance energy independence with environment",
+    "climate_cons_strong_2": "Expand fossil fuel production",
+    "climate_cons_strong_3": "Eliminate EPA regulations",
+    "climate_cons_strong_4": "Withdraw from climate agreements",
 
-        # IMMIGRATION
-        # Progressive
-        "immig_prog_strong": "Open borders with a path to citizenship for all immigrants",
-        "immig_prog_mod": "Welcome immigrants while maintaining reasonable entry processes",
-        # Moderate
-        "immig_mod_1": "Support legal immigration while securing borders",
-        "immig_mod_2": "Reform immigration with both compassion and control",
-        # Conservative
-        "immig_cons_mod": "Merit-based immigration with strong border security",
-        "immig_cons_strong": "Strict immigration controls and border enforcement only",
+    # IMMIGRATION
+    # Progressive
+    "immig_prog_strong_2": "Abolish ICE and border patrol",
+    "immig_prog_strong_3": "Grant citizenship to all current residents",
+    "immig_prog_strong_4": "Provide full benefits to all immigrants",
+    "immig_prog_mod_2": "Expand refugee and asylum programs",
+    "immig_prog_mod_3": "Create more legal immigration pathways",
+    "immig_prog_mod_4": "Support sanctuary city policies",
+    # Moderate
+    "immig_mod_3": "Modernize visa system and border security",
+    "immig_mod_4": "Guest worker programs with oversight",
+    "immig_mod_5": "Skills-based immigration with family unity",
+    # Conservative
+    "immig_cons_mod_2": "Points-based immigration system",
+    "immig_cons_mod_3": "Strengthen visa tracking system",
+    "immig_cons_mod_4": "Reform chain migration policies",
+    "immig_cons_strong_2": "End birthright citizenship",
+    "immig_cons_strong_3": "Deport all undocumented immigrants",
+    "immig_cons_strong_4": "Build physical barriers on all borders",
 
-        # SOCIAL ISSUES
-        # Progressive
-        "social_prog_strong": "Actively promote progressive social change and equity in all institutions",
-        "social_prog_mod": "Support social progress while respecting diverse viewpoints",
-        # Moderate
-        "social_mod_1": "Balance traditional values with changing social norms",
-        "social_mod_2": "Let social change happen gradually through consensus",
-        # Conservative
-        "social_cons_mod": "Preserve traditional values while accepting some changes",
-        "social_cons_strong": "Strictly maintain traditional social and cultural values",
+    # SOCIAL ISSUES
+    # Progressive
+    "social_prog_strong_2": "Mandate diversity quotas in all institutions",
+    "social_prog_strong_3": "Reparations for historical injustices",
+    "social_prog_strong_4": "Restructure all systems for equity",
+    "social_prog_mod_2": "Reform police and justice systems",
+    "social_prog_mod_3": "Expand civil rights protections",
+    "social_prog_mod_4": "Increase funding for social programs",
+    # Moderate
+    "social_mod_3": "Promote dialogue across differences",
+    "social_mod_4": "Evidence-based social policy reform",
+    "social_mod_5": "Balance individual rights and community needs",
+    # Conservative
+    "social_cons_mod_2": "Protect religious freedom rights",
+    "social_cons_mod_3": "Support faith-based initiatives",
+    "social_cons_mod_4": "Maintain current social structures",
+    "social_cons_strong_2": "Return to traditional family values",
+    "social_cons_strong_3": "Limit social change through legislation",
+    "social_cons_strong_4": "Promote religious values in policy",
 
-        # GUN POLICY
-        # Progressive
-        "guns_prog_strong": "Ban most firearms and implement strict gun control nationwide",
-        "guns_prog_mod": "Stronger gun control including assault weapon restrictions",
-        # Moderate
-        "guns_mod_1": "Universal background checks while protecting basic gun rights",
-        "guns_mod_2": "Balance public safety with constitutional rights",
-        # Conservative
-        "guns_cons_mod": "Protect gun rights with limited safety regulations",
-        "guns_cons_strong": "No restrictions on Second Amendment rights whatsoever",
+    # GUN POLICY
+    # Progressive
+    "guns_prog_strong_2": "Mandatory gun buyback programs",
+    "guns_prog_strong_3": "Ban private gun ownership",
+    "guns_prog_strong_4": "Strict liability for gun manufacturers",
+    "guns_prog_mod_2": "Create gun ownership database",
+    "guns_prog_mod_3": "Require insurance for gun owners",
+    "guns_prog_mod_4": "Ban high-capacity magazines",
+    # Moderate
+    "guns_mod_3": "Improve mental health screening",
+    "guns_mod_4": "Register assault-style weapons",
+    "guns_mod_5": "Support responsible gun ownership",
+    # Conservative
+    "guns_cons_mod_2": "State-level gun policy control",
+    "guns_cons_mod_3": "Focus on mental health not guns",
+    "guns_cons_mod_4": "Protect concealed carry rights",
+    "guns_cons_strong_2": "Allow open carry everywhere",
+    "guns_cons_strong_3": "Eliminate waiting periods",
+    "guns_cons_strong_4": "Constitutional carry nationwide",
 
-        # EDUCATION
-        # Progressive
-        "edu_prog_strong": "Free public education through college with federal standards",
-        "edu_prog_mod": "Increase education funding and expand public programs",
-        # Moderate
-        "edu_mod_1": "Improve public schools while allowing school choice",
-        "edu_mod_2": "Balance public education with alternative options",
-        # Conservative
-        "edu_cons_mod": "School choice and local control of education",
-        "edu_cons_strong": "Privatize education through vouchers and choice",
+    # EDUCATION
+    # Progressive
+    "edu_prog_strong_2": "Free universal preschool through PhD",
+    "edu_prog_strong_3": "Cancel all student debt",
+    "edu_prog_strong_4": "Federalize all education systems",
+    "edu_prog_mod_2": "Increase teacher pay significantly",
+    "edu_prog_mod_3": "Expand early childhood programs",
+    "edu_prog_mod_4": "Fund arts and enrichment programs",
+    # Moderate
+    "edu_mod_3": "Support vocational training options",
+    "edu_mod_4": "Reform standardized testing",
+    "edu_mod_5": "Modernize curriculum standards",
+    # Conservative
+    "edu_cons_mod_2": "Promote charter school expansion",
+    "edu_cons_mod_3": "Focus on core academics",
+    "edu_cons_mod_4": "Support homeschooling rights",
+    "edu_cons_strong_2": "Eliminate Department of Education",
+    "edu_cons_strong_3": "End public education funding",
+    "edu_cons_strong_4": "Full privatization of schools",
 
-        # FOREIGN POLICY
-        # Progressive
-        "foreign_prog_strong": "Focus on international cooperation and reduce military spending",
-        "foreign_prog_mod": "Emphasize diplomacy while maintaining defensive capability",
-        # Moderate
-        "foreign_mod_1": "Balance diplomatic and military approaches",
-        "foreign_mod_2": "Selective engagement based on clear national interests",
-        # Conservative
-        "foreign_cons_mod": "Peace through strength and strong military presence",
-        "foreign_cons_strong": "Military strength and aggressive foreign policy"
+    # FOREIGN POLICY
+    # Progressive
+    "foreign_prog_strong_2": "Close all foreign military bases",
+    "foreign_prog_strong_3": "End all military alliances",
+    "foreign_prog_strong_4": "Eliminate nuclear weapons",
+    "foreign_prog_mod_2": "Expand international aid programs",
+    "foreign_prog_mod_3": "Strengthen UN involvement",
+    "foreign_prog_mod_4": "Focus on climate cooperation",
+    # Moderate
+    "foreign_mod_3": "Support strategic partnerships",
+    "foreign_mod_4": "Maintain regional stability",
+    "foreign_mod_5": "Promote democratic values abroad",
+    # Conservative
+    "foreign_cons_mod_2": "Strengthen military alliances",
+    "foreign_cons_mod_3": "Increase defense readiness",
+    "foreign_cons_mod_4": "Support strategic deterrence",
+    "foreign_cons_strong_2": "Double military spending",
+    "foreign_cons_strong_3": "Unilateral foreign policy",
+    "foreign_cons_strong_4": "Expand nuclear arsenal"
     }
     return statements
 
